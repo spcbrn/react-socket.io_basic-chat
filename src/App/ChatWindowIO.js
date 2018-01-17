@@ -45,7 +45,7 @@ class ChatWindowIO extends Component {
     (Side note: The socket.io API is extensive, and growing, and offers a plethora of methods and patterns.  Check it.)
     */
     this.socket.emit('new message', newMessage);
-    this.setState((prevState, props) => ({ chat_messages: [newMessage, ...this.state.chat_messages] }));
+    this.setState((prevState, props) => ({ chat_messages: [newMessage, ...prevState.chat_messages] }));
 
     this.refs.input.value = '';
   }
