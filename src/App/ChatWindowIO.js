@@ -21,7 +21,7 @@ class ChatWindowIO extends Component {
     console.log('socket connected');
     this.socket = io();
     this.socket.on('get messages', data => { console.log('new message')
-                                             this.setState({ chat_messages: data.messages }) });
+                                             this.setState((prevState, props) => ({ chat_messages: data.messages })) });
   }
 
   /*
@@ -45,7 +45,7 @@ class ChatWindowIO extends Component {
     (Side note: The socket.io API is extensive, and growing, and offers a plethora of methods and patterns.  Check it.)
     */
     this.socket.emit('new message', newMessage);
-    this.setState({ chat_messages: [newMessage, ...this.state.chat_messages] });
+    this.setState((prevState, props) => ({ chat_messages: [newMessage, ...this.state.chat_messages] }));
 
     this.refs.input.value = '';
   }

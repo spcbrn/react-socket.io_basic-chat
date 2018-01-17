@@ -30,7 +30,7 @@ class ChatWindowREST extends Component {
     };
 
     axios.post('/api/newmessage', newMessage)
-    .then(res => this.setState({ chat_messages: res.data }))
+    .then(res => this.setState((prevState, props) => ({ chat_messages: res.data })))
     .catch(err => console.log(err));
 
     this.refs.input.value = '';
@@ -44,7 +44,7 @@ class ChatWindowREST extends Component {
   pollServer = () => {
     console.log('polling server...')
     axios.get('/api/messages')
-    .then(res => this.setState({ chat_messages: res.data }))
+    .then(res => this.setState((prevState, props) => ({ chat_messages: res.data })))
     .catch(err => console.log(err));
   }
 
