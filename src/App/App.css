@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+}
+
+.chat_window_main {
+  width: 95vw;
+  height: 80vh;
+  margin: auto;
+}
+
+#chat_window_container {
+  background-color: #000;
+  border-radius: 3px;
+  width: calc(100% - 40px);
+  height: calc(96% - 40px);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin:auto;
+}
+
+#chat_window_messages_main {
+  padding: 5px;
+  padding-bottom: 10px;
+  height: calc(90% - 20px);
+  width: calc(100% - 10px);
+  background-color: rgb(25, 25, 25);
+  box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.75);
+  border-radius: 3px;
+}
+
+#chat_window_messages_container {
+  padding: 15px;
+  padding-bottom: 0px;
+  height: calc(99% - 2px);
+  width: calc(100% - 30px);
+  background-color: rgb(12, 12, 12);
+  border-radius: 3px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#chat_window_new_message_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 9%;
+  margin-top: 5px;
+  width: 100%;
+}
+
+#message_wrap {
+  width: calc(100% - 20px);
+  height: 65px;
+  padding: 0 10px;
+  background: rgb(25, 25, 25);
+  border-radius: 3px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+  color: rgb(0, 145, 16);
+}
+
+input {
+  color:rgb(0, 145, 16);
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid;
+  height: 30px;
+  font-size: 15px;
+  outline: none;
+  background:rgb(3, 12, 0);
+}
