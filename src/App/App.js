@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import ChatWindowREST from './ChatWindowREST';
 import ChatWindowIO from './ChatWindowIO';
+import ChatWindowMobX from './ChatWindowMobX';
+
+import { appState } from './store';
 
 import './App.css';
 
@@ -17,7 +20,11 @@ class App extends Component {
 
   render() {
 
-    const renderChat = flag => flag === 'rest' ? <ChatWindowREST /> : <ChatWindowIO />;
+    const renderChat = flag => flag === 'rest'
+                                 ? <ChatWindowREST />
+                                 : flag === 'io'
+                                   ? <ChatWindowIO />
+                                   : <ChatWindowMobX store={appState} />;
 
     return (
       <main className="App">
@@ -26,6 +33,8 @@ class App extends Component {
                 onClick={() => this.toggleChat('rest')}>REST</button>
         <button disabled={this.state.active_chat === 'io'}
                 onClick={() => this.toggleChat('io')}>IO</button>
+        <button disabled={this.state.active_chat === 'mobx'}
+                onClick={() => this.toggleChat('mobx')}>MobX</button>
         <br /><br />
         {renderChat(this.state.active_chat)}
       </main>
