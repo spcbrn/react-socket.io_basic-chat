@@ -63,21 +63,28 @@ class ChatWindowIO extends Component {
 
     return (
       <section className="chat_window_main">
+
         <h3>IO Chat</h3>
+
         <div id="chat_window_container">
           <div id="chat_window_messages_main">
             <div id="chat_window_messages_container">
+
               {messageList}
+
             </div>
           </div>
           <div id="chat_window_new_message_container">
+
             <input placeholder="Username"
                    ref="username"
             />
+
             <input placeholder="Type a message..."
                    ref="input"
                    onKeyDown={this.submitMessage}
             />
+            
           </div>
         </div>
       </section>
