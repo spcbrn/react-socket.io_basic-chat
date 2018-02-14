@@ -18,8 +18,8 @@ class ChatWindowIO extends Component {
   Add your event listeners here as well.
   */
   componentDidMount = () => {
-    console.log('socket connected');
     this.socket = io();
+    console.log('socket connected');
     this.socket.on('get messages', data => { console.log('new message')
                                              this.setState((prevState, props) => ({ chat_messages: data.messages })) });
   }
