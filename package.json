@@ -1,7 +1,7 @@
 {
   "name": "chat_noredux",
   "version": "0.1.0",
-  "description": "",
+  "description": "This a simple chat application offering a side-by-side comparison of REST logic vs socket.io logic to demonstrate websockets.",
   "private": true,
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
+    "redux": "^3.7.2",
     "socket.io": "^2.0.4"
   },
   "devDependencies": {},

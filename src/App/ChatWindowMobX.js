@@ -58,7 +58,7 @@ const ChatWindowMobX = observer(class ChatWindowMobX extends Component {
 
     return (
       <section className="chat_window_main">
-        <h3>IO Chat</h3>
+        <h3>IO Chat (MobX)</h3>
         <div id="chat_window_container">
           <div id="chat_window_messages_main">
             <div id="chat_window_messages_container">

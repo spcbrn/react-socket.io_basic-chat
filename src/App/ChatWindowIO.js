@@ -64,7 +64,7 @@ class ChatWindowIO extends Component {
     return (
       <section className="chat_window_main">
 
-        <h3>IO Chat</h3>
+        <h3>IO Chat (component state)</h3>
 
         <div id="chat_window_container">
           <div id="chat_window_messages_main">

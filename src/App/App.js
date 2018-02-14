@@ -4,7 +4,7 @@ import ChatWindowREST from './ChatWindowREST';
 import ChatWindowIO from './ChatWindowIO';
 import ChatWindowMobX from './ChatWindowMobX';
 
-import { appState } from './store';
+import { mobxState } from './mobx_store';
 
 import './App.css';
 
@@ -21,10 +21,10 @@ class App extends Component {
   render() {
 
     const renderChat = flag => flag === 'rest'
-                                 ? <ChatWindowREST />
-                                 : flag === 'io'
-                                   ? <ChatWindowIO />
-                                   : <ChatWindowMobX store={appState} />;
+                                  ? <ChatWindowREST />
+                                  : flag === 'io'
+                                    ? <ChatWindowIO />
+                                    : <ChatWindowMobX store={mobxState} />;
 
     return (
       <main className="App">
