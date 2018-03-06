@@ -1,14 +1,6 @@
 
 
-
-
-
-
 //COPY ALL CONTENT FROM LINE 15 ON AND WITH IT REPLACE ALL OF THE CONTENT IN 'node_modules/react-scripts/config/paths.js'
-
-
-
-
 
 
 
